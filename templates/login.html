@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login登录页面</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: fit-content;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Login登录页面</h1>
+    {% if error %}<p style="color: red;">{{ error }}</p>{% endif %}
+    <form method="post">
+        <p>Username用户名: <input type="text" name="username" required></p>
+        <p>Password密码: <input type="password" name="password" required></p>
+        <p>Captcha验证码 ({{ captcha }}): <input type="text" name="captcha" required></p>
+        <button type="submit">Login登录</button>
+        <a href="{{ url_for('register') }}">Register注册</a>
+    </form>
+</body>
+</html>

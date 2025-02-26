@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome {{ username }}!</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
